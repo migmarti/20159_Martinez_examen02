@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.mmart.a20159_martinez_examen02.BoardActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Name"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editName"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Author"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/editName"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editAuthor"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Ladder Begin"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/editAuthor"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editLadderBegin"
+        android:layout_below="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3"
+        android:text="5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Ladder End"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/editAuthor"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editLadderEnd"
+        android:layout_alignBottom="@+id/editLadderBegin"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_alignEnd="@+id/textView4"
+        android:text="10" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD LADDER"
+        android:id="@+id/buttonAddLadder"
+        android:layout_alignBottom="@+id/editLadderEnd"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Snake Begin"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/editLadderBegin"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Snake End"
+        android:id="@+id/textView6"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editSnakeEnd"
+        android:layout_below="@+id/textView6"
+        android:layout_alignStart="@+id/editLadderEnd"
+        android:layout_alignEnd="@+id/editLadderEnd"
+        android:text="4" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editSnakeBegin"
+        android:layout_alignBottom="@+id/editSnakeEnd"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/textView5"
+        android:text="11" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD SNAKE"
+        android:id="@+id/buttonAddSnake"
+        android:layout_alignBottom="@+id/editSnakeEnd"
+        android:layout_alignEnd="@+id/buttonAddLadder"
+        android:layout_alignStart="@+id/buttonAddLadder" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GET LEAST # OF MOVES"
+        android:id="@+id/buttonMoves"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/editLadderBegin" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="POST"
+        android:id="@+id/buttonPost"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/buttonAddSnake"
+        android:layout_alignTop="@+id/buttonMoves"
+        android:layout_alignEnd="@+id/buttonAddSnake" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listLadders"
+        android:layout_below="@+id/editSnakeBegin"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/buttonMoves"
+        android:layout_toStartOf="@+id/textView6" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CLEAR"
+        android:id="@+id/buttonClear"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/listLadders" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listSnakes"
+        android:layout_alignTop="@+id/listLadders"
+        android:layout_alignEnd="@+id/buttonAddSnake"
+        android:layout_above="@+id/buttonPost"
+        android:layout_toEndOf="@+id/buttonClear" />
+
+</RelativeLayout>
